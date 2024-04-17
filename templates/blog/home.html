@@ -1,0 +1,30 @@
+{% extends 'blogbase.html' %}
+	
+{% block content %}
+
+<div class="container px-4 px-lg-5">
+	<div class="row gx-4 gx-lg-5 justify-content-center">
+		<div class="col-md-10 col-lg-8 col-xl-7">
+			<!-- Post preview-->
+			{% for post in posts %}
+			<div class="post-preview">
+				<a href="post.html"><h2 class="post-title">{{ post.title }}</h2></a>
+				<p class="post-meta">Published on {{ post.published_at | date:"M d, Y" }} by {{ post.author | title}}</p>
+				<p class="card-text">{{ post.content }}</p>
+				{% if request.user.is_authenticated and request.user == post.author %}
+				<p>
+					<a href="{% url 'post-edit' post.id %}">Edit</a> 
+					<a href="{% url 'post-delete' post.id%}">Delete</a>
+				</p>
+				{% endif %}
+			</div>
+			<!-- Divider-->
+			<hr class="my-4">
+			{% endfor %}
+			<!-- Pager-->
+			<div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+		</div>
+	</div>
+</div>
+	
+{% endblock content %}
