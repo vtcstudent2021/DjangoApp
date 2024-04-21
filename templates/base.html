@@ -26,14 +26,10 @@
                 </button>
                 <div class="collapse navbar-collapse d-grid gap-2 d-md-block" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Products
-                            </a>
+                                data-bs-toggle="dropdown" aria-expanded="false">Products</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{% url "store:product_all" %}">All</a></li>
                                 {% for c in categories %}
@@ -43,18 +39,10 @@
                                 {% endfor %}
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog/">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about/">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Address</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">ChatBot</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Store Address</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">AI Chat Bot</a></li>
                     </ul>
                     <a type="button" role="button" class="btn btn-outline-success" href="{% url "basket:basket_summary" %}">
                         Cart
@@ -88,10 +76,11 @@
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Products</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Blog</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Store Address</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">AI Chat Bot</a></li>
         </ul>
         <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
       </footer>
