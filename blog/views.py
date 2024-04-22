@@ -59,4 +59,8 @@ def home(request):
     context = {'posts': posts}
     return render(request, 'blog/home.html', context)
 
-
+def post_detail(request, post_id):
+    post = Post.objects.get(id=post_id)
+    view_count = View.objects.get(post=post).view
+    print(view_count)
+    return render(request, 'post_detail.html', {'post': post, 'view_count': view_count})

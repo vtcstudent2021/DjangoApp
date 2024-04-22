@@ -22,3 +22,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ["in_stock", "is_active"]
     list_editable = ["price", "in_stock"]
     prepopulated_fields = {"slug": ("title",)}
+
+
+
+
